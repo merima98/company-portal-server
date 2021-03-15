@@ -28,7 +28,10 @@ namespace company_portal_server
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+             
             services.AddControllers();
+
+            services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin()));
 
             var connection = @"Server=.;Database=company_portal;Trusted_Connection=True;";
             services.AddDbContext<company_portalContext>(options => options.UseSqlServer(connection));
@@ -49,6 +52,8 @@ namespace company_portal_server
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();  
 
             app.UseAuthorization();
 
