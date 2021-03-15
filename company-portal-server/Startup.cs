@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using company_portal_server.Models;
+using company_portal_server.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +29,13 @@ namespace company_portal_server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            var connection = @"Server=.;Database=company_portal;Trusted_Connection=True;";
+            services.AddDbContext<company_portalContext>(options => options.UseSqlServer(connection));
+
+
+            services.AddScoped<IEmployees, EmployeeService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
