@@ -30,7 +30,7 @@ namespace company_portal_server.Services
         public Employee Update(int id, UpdateEmployee request)
         {
 
-            var entity = _company_PortalContext.Employees.Find(id);
+            var entity = _company_PortalContext.Employees.Where(x=>x.Email==request.Email).FirstOrDefault();
             _company_PortalContext.Set<Employee>().Attach(entity);
             _company_PortalContext.Set<Employee>().Update(entity);
 

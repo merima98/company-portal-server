@@ -32,7 +32,12 @@ namespace company_portal_server
             services.AddControllers();
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin()));
+            services.AddCors(options => 
+            options.AddDefaultPolicy
+            (builder => builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader() 
+            ));
 
             var connection = @"Server=.;Database=company_portal;Trusted_Connection=True;";
             services.AddDbContext<company_portalContext>(options => options.UseSqlServer(connection));
@@ -53,8 +58,8 @@ namespace company_portal_server
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseCors();  
+             
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthorization();
 
