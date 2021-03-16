@@ -9,5 +9,6 @@ namespace company_portal_server.Services
     public interface IEmployees
     {
         List<Employee> GetAll();
+        Employee GetById(int employeeId);
     }
 }

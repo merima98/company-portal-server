@@ -13,7 +13,13 @@ namespace company_portal_server.Services
         public EmployeeService(company_portalContext company_PortalContext)
         {
             _company_PortalContext = company_PortalContext;
-        } 
+        }
+
+        public Employee GetById(int employeeId)
+        {
+            var employee = _company_PortalContext.Employees.Where(x => x.Id == employeeId).First();
+            return employee;
+        }
 
         List<Employee> IEmployees.GetAll()
         {

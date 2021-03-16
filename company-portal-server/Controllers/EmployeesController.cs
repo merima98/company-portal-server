@@ -24,5 +24,14 @@ namespace company_portal_server.Controllers
         {
             return _service.GetAll();
         }
+
+        [Route("~/api/GetEmployee/{id}")]
+
+        [HttpGet("{id}")]
+        public Employee GetById(int id)
+        {
+            return _service.GetById(id);
+        }
+
     }
 }
