@@ -1,4 +1,5 @@
 ﻿using company_portal_server.Models;
+using company_portal_server.Updates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace company_portal_server.Services
     {
         List<Employee> GetAll();
         Employee GetById(int employeeId);
+        Employee Update(int id, UpdateEmployee request);
     }
 }

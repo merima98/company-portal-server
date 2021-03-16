@@ -56,8 +56,10 @@ C:\Users\HOME\Desktop\company-portal-server\company-portal-server\bin\Debug\netc
 C:\Users\HOME\Desktop\company-portal-server\company-portal-server\bin\Debug\netcoreapp3.1\company-portal-server.pdb
 C:\Users\HOME\Desktop\company-portal-server\company-portal-server\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\HOME\Desktop\company-portal-server\company-portal-server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\HOME\Desktop\company-portal-server\company-portal-server\obj\Debug\netcoreapp3.1\company-portal-server.csproj.CoreCompileInputs.cache
-C:\Users\HOME\Desktop\company-portal-server\company-portal-server\obj\Debug\netcoreapp3.1\company-portal-server.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\HOME\Desktop\company-portal-server\company-portal-server\obj\Debug\netcoreapp3.1\company-portal-server.dll
 C:\Users\HOME\Desktop\company-portal-server\company-portal-server\obj\Debug\netcoreapp3.1\company-portal-server.pdb
 C:\Users\HOME\Desktop\company-portal-server\company-portal-server\obj\Debug\netcoreapp3.1\company-portal-server.genruntimeconfig.cache
+C:\Users\HOME\Desktop\company-portal-server\company-portal-server\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\HOME\Desktop\company-portal-server\company-portal-server\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\HOME\Desktop\company-portal-server\company-portal-server\obj\Debug\netcoreapp3.1\company-portal-server.csproj.CoreCompileInputs.cache
+C:\Users\HOME\Desktop\company-portal-server\company-portal-server\obj\Debug\netcoreapp3.1\company-portal-server.MvcApplicationPartsAssemblyInfo.cache

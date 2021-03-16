@@ -30,6 +30,7 @@ namespace company_portal_server
         {
              
             services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddCors(options => options.AddDefaultPolicy(builder => builder.AllowAnyOrigin()));
 

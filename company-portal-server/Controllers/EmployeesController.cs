@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using company_portal_server.Models;
 using company_portal_server.Services;
+using company_portal_server.Updates;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,6 +32,13 @@ namespace company_portal_server.Controllers
         public Employee GetById(int id)
         {
             return _service.GetById(id);
+        }
+
+        [Route("~/api/UpdateEmployee/{id}")]
+        [HttpPatch("{id}")]
+        public Employee Update(int id, UpdateEmployee request)
+        {
+            return _service.Update(id, request);
         }
 
     }
