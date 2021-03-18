@@ -27,6 +27,14 @@ namespace company_portal_server.Services
             return employee;
         }
 
+        public Employee Insert(AddEmployee request)
+        {
+            var entity = _mapper.Map<Employee>(request);
+            _company_PortalContext.Set<Employee>().Add(entity);
+            _company_PortalContext.SaveChanges();
+            return _mapper.Map<Employee>(entity);
+        }
+
         public Employee Update(int id, UpdateEmployee request)
         {
 
@@ -36,7 +44,6 @@ namespace company_portal_server.Services
 
             _mapper.Map(request, entity);
             _company_PortalContext.SaveChanges();
-
 
             return entity;
         }

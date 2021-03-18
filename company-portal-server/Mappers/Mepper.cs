@@ -13,6 +13,7 @@ namespace company_portal_server.Mappers
         public Mepper()
         { 
             CreateMap<UpdateEmployee, Employee>();
+            CreateMap<AddEmployee, Employee>();
         }
     }
 }

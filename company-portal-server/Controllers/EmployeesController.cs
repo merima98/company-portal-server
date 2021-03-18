@@ -42,5 +42,12 @@ namespace company_portal_server.Controllers
             return _service.Update(id, request);
         }
 
+        [Route("~/api/AddEmployee")]
+        [HttpPost]
+        public Employee Insert(AddEmployee request)
+        {
+            return _service.Insert(request);
+        }
+
     }
 }

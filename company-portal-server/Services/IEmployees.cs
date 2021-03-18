@@ -12,5 +12,6 @@ namespace company_portal_server.Services
         List<Employee> GetAll();
         Employee GetById(int employeeId);
         Employee Update(int id, UpdateEmployee request);
+        Employee Insert(AddEmployee request);
     }
 }
